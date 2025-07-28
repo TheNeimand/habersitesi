@@ -67,3 +67,37 @@ h6 {
 .footer-link {
   @apply text-base text-[var(--secondary-color)] hover:text-[var(--primary-color)] transition-colors duration-300;
 }
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* İlgili Haberler */
+@media (max-width: 1023px) {
+    .lg\:col-span-4 {
+        display: none;
+    }
+    .ilgili-haberler-mobil {
+        display: block;
+    }
+}
+@media (min-width: 1024px) {
+    .ilgili-haberler-mobil {
+        display: none;
+    }
+}
