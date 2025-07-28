@@ -1,0 +1,69 @@
+/* css/style.css */
+
+/* Değişken Tanımları */
+:root {
+  --primary-color: #111827;
+  --secondary-color: #6B7280;
+  --background-color: #ffffff;
+  --surface-color: #f9fafb;
+  --accent-color: #e5e7eb;
+
+  /* hakkımızda.php'den gelenler - çakışanlar overwrite ediliyor */
+  /* --primary-color: #141414;  - index.php'deki #111827 daha belirgin */
+  /* --secondary-color: #f2f2f2; - index.php'deki #6B7280 daha belirgin */
+  /* --accent-color: #757575; - index.php'deki #e5e7eb daha belirgin */
+
+  /* katagori.php'den gelenler - çakışanlar overwrite ediliyor */
+  /* --primary-color: #141414; - index.php'deki #111827 daha belirgin */
+  /* --secondary-color: #f2f2f2; - index.php'deki #6B7280 daha belirgin */
+  --accent-color-category: #4f46e5; /* katagori.php'deki accent-color farklı, bunu ekleyelim */
+  --text-primary: #141414; /* katagori.php'den */
+  --text-secondary: #757575; /* katagori.php'den */
+  --border-color: #e0e0e0; /* katagori.php'den */
+
+  /* yazar.php'den gelenler - çakışanlar overwrite ediliyor */
+  /* --primary-color: #141414; - index.php'deki #111827 daha belirgin */
+  --secondary-color-author: #F5F5F5; /* yazar.php'deki secondary-color farklı, bunu ekleyelim */
+  /* --text-primary: #141414; - katagori.php'deki ile aynı */
+  /* --text-secondary: #757575; - katagori.php'deki ile aynı */
+}
+
+/* Genel Body ve Font Stilleri */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Newsreader', serif;
+}
+
+/* Header Bileşen Stilleri */
+.nav-link {
+  @apply text-base font-medium text-[var(--secondary-color)] hover:text-[var(--primary-color)] transition-colors duration-300;
+}
+.icon-button {
+  @apply flex items-center justify-center size-10 rounded-full bg-transparent hover:bg-[var(--accent-color)] transition-colors duration-300 text-[var(--secondary-color)] hover:text-[var(--primary-color)];
+}
+
+/* Yazar Sayfası Bileşen Stilleri */
+.author-stat {
+  @apply text-[var(--text-secondary)] text-sm font-normal leading-normal text-center;
+}
+.tab-link {
+  @apply flex flex-col items-center justify-center border-b-2 pb-3 pt-4 text-sm font-bold leading-normal tracking-[0.015em] transition-colors;
+}
+.post-card {
+  @apply flex items-start gap-6 border-b border-gray-200 p-6;
+}
+
+/* Footer Bileşen Stilleri */
+.footer-link {
+  @apply text-base text-[var(--secondary-color)] hover:text-[var(--primary-color)] transition-colors duration-300;
+}
