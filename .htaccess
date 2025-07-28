@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)$ haber-detay.php?kategori=$1&slug=$2 [L]
+RewriteRule ^([a-zA-Z0-9-]+)$ katagori.php?kategori=$1 [L]
